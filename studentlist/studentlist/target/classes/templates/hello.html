@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Server Programming with Spring Boot | Handling Lists</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+    <div>
+        <p>Welcome to Haaga-Helia!</p>
+        <ul th:each="student : ${students}">
+            <!--<li th:each="${student.firstName} ${student.lastName} : ${students}"></li>-->
+            <li th:text="${student.firstName} + ' ' + ${student.lastName}"></li>
+        </ul>
+    </div>
+</body>
+</html>
