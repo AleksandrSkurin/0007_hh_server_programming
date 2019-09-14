@@ -21,7 +21,7 @@ public class FriendController {
 	}
 	
 	@RequestMapping(value = "/index")
-	public String friendList(@RequestParam(value="friend") String fname,
+	public String friendList(@RequestParam(required=false, value="friend") String fname,
 							 Model model) {
 		model.addAttribute("friend", new Friend(fname));
 		model.addAttribute("friends", friends);
